@@ -47,11 +47,101 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AcademicAdvisorDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AcademicAdvisorDashboardForm.Designer.cs">
+      <DependentUpon>AcademicAdvisorDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CoursesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CoursesForm.Designer.cs">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HRAccessDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HRAccessDashboardForm.Designer.cs">
+      <DependentUpon>HRAccessDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProgramsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProgramsForm.Designer.cs">
+      <DependentUpon>ProgramsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SchoolAdminDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SchoolAdminDashboardForm.Designer.cs">
+      <DependentUpon>SchoolAdminDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ITAdminDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ITAdminDashboardForm.Designer.cs">
+      <DependentUpon>ITAdminDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResetUserPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResetUserPasswordForm.Designer.cs">
+      <DependentUpon>ResetUserPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SchAppDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SchAppDashboardForm.Designer.cs">
+      <DependentUpon>SchAppDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentEnrollmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentEnrollmentForm.Designer.cs">
+      <DependentUpon>StudentEnrollmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentInfoForm.Designer.cs">
+      <DependentUpon>StudentInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeacherDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeacherDashboardForm.Designer.cs">
+      <DependentUpon>TeacherDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserLoginForm.Designer.cs">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserRoleSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserRoleSearchForm.Designer.cs">
+      <DependentUpon>UserRoleSearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserRolesForm.cs">
       <SubType>Form</SubType>
@@ -59,7 +149,39 @@
     <Compile Include="Forms\UserRolesForm.Designer.cs">
       <DependentUpon>UserRolesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ViewCoursesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewCoursesForm.Designer.cs">
+      <DependentUpon>ViewCoursesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewProgramsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewProgramsForm.Designer.cs">
+      <DependentUpon>ViewProgramsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewStudentsForm.Designer.cs">
+      <DependentUpon>ViewStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewTeachersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewTeachersForm.Designer.cs">
+      <DependentUpon>ViewTeachersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewUsersForm.Designer.cs">
+      <DependentUpon>ViewUsersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="General\AppConnection.cs" />
+    <Compile Include="General\EncryptData.cs" />
+    <Compile Include="General\LoggedInUSerInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\TemplateForm.cs">
@@ -68,11 +190,71 @@
     <Compile Include="Forms\TemplateForm.Designer.cs">
       <DependentUpon>TemplateForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AcademicAdvisorDashboardForm.resx">
+      <DependentUpon>AcademicAdvisorDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CoursesForm.resx">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HRAccessDashboardForm.resx">
+      <DependentUpon>HRAccessDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ITAdminDashboardForm.resx">
+      <DependentUpon>ITAdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProgramsForm.resx">
+      <DependentUpon>ProgramsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResetUserPasswordForm.resx">
+      <DependentUpon>ResetUserPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SchAppDashboardForm.resx">
+      <DependentUpon>SchAppDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SchoolAdminDashboardForm.resx">
+      <DependentUpon>SchoolAdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentEnrollmentForm.resx">
+      <DependentUpon>StudentEnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentInfoForm.resx">
+      <DependentUpon>StudentInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeacherDashboardForm.resx">
+      <DependentUpon>TeacherDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserLoginForm.resx">
+      <DependentUpon>UserLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserRoleSearchForm.resx">
+      <DependentUpon>UserRoleSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserRolesForm.resx">
       <DependentUpon>UserRolesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewCoursesForm.resx">
+      <DependentUpon>ViewCoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewProgramsForm.resx">
+      <DependentUpon>ViewProgramsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewStudentsForm.resx">
+      <DependentUpon>ViewStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewTeachersForm.resx">
+      <DependentUpon>ViewTeachersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewUsersForm.resx">
+      <DependentUpon>ViewUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +264,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Forms\TemplateForm.resx">
       <DependentUpon>TemplateForm.cs</DependentUpon>
@@ -98,6 +281,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchApplicationInsights_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scholastic Application %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationName2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationName3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Students2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scholastic Application %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationName1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scholastic Application %281%292.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,7 @@ namespace SchApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserRolesForm());
+            Application.Run(new UserLoginForm());
         }
     }
 }

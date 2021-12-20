@@ -29,37 +29,147 @@ namespace SchApp.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.FirstNameLbl = new System.Windows.Forms.Label();
+            this.FirstNameTxtBx = new System.Windows.Forms.TextBox();
+            this.LastNameTxtBx = new System.Windows.Forms.TextBox();
+            this.LastNameLbl = new System.Windows.Forms.Label();
+            this.UserRoleComboBox = new System.Windows.Forms.ComboBox();
+            this.UserRoleLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DescriptionTextBx = new System.Windows.Forms.TextBox();
+            this.IsActiveCheckBx = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UserNamelbl = new System.Windows.Forms.Label();
-            this.UserNameTxtBox = new System.Windows.Forms.TextBox();
-            this.Passwordlbl = new System.Windows.Forms.Label();
-            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
-            this.UserRoleComboBx = new System.Windows.Forms.ComboBox();
-            this.UserRolelbl = new System.Windows.Forms.Label();
-            this.ActiveUserChkBox = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.DescriptionLbl = new System.Windows.Forms.Label();
+            this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasswordLbl = new System.Windows.Forms.Label();
+            this.PasswordTxtBx = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // FirstNameLbl
+            // 
+            this.FirstNameLbl.AutoSize = true;
+            this.FirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLbl.Location = new System.Drawing.Point(23, 47);
+            this.FirstNameLbl.Name = "FirstNameLbl";
+            this.FirstNameLbl.Size = new System.Drawing.Size(71, 13);
+            this.FirstNameLbl.TabIndex = 0;
+            this.FirstNameLbl.Text = "First Name:";
+            // 
+            // FirstNameTxtBx
+            // 
+            this.FirstNameTxtBx.Location = new System.Drawing.Point(102, 44);
+            this.FirstNameTxtBx.Name = "FirstNameTxtBx";
+            this.FirstNameTxtBx.Size = new System.Drawing.Size(175, 20);
+            this.FirstNameTxtBx.TabIndex = 1;
+            // 
+            // LastNameTxtBx
+            // 
+            this.LastNameTxtBx.Location = new System.Drawing.Point(102, 81);
+            this.LastNameTxtBx.Name = "LastNameTxtBx";
+            this.LastNameTxtBx.Size = new System.Drawing.Size(175, 20);
+            this.LastNameTxtBx.TabIndex = 2;
+            // 
+            // LastNameLbl
+            // 
+            this.LastNameLbl.AutoSize = true;
+            this.LastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameLbl.Location = new System.Drawing.Point(23, 84);
+            this.LastNameLbl.Name = "LastNameLbl";
+            this.LastNameLbl.Size = new System.Drawing.Size(71, 13);
+            this.LastNameLbl.TabIndex = 2;
+            this.LastNameLbl.Text = "Last Name:";
+            // 
+            // UserRoleComboBox
+            // 
+            this.UserRoleComboBox.FormattingEnabled = true;
+            this.UserRoleComboBox.Location = new System.Drawing.Point(102, 158);
+            this.UserRoleComboBox.Name = "UserRoleComboBox";
+            this.UserRoleComboBox.Size = new System.Drawing.Size(121, 21);
+            this.UserRoleComboBox.TabIndex = 4;
+            // 
+            // UserRoleLbl
+            // 
+            this.UserRoleLbl.AutoSize = true;
+            this.UserRoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserRoleLbl.Location = new System.Drawing.Point(23, 161);
+            this.UserRoleLbl.Name = "UserRoleLbl";
+            this.UserRoleLbl.Size = new System.Drawing.Size(73, 13);
+            this.UserRoleLbl.TabIndex = 5;
+            this.UserRoleLbl.Text = "User Roles:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Description:";
+            // 
+            // DescriptionTextBx
+            // 
+            this.DescriptionTextBx.Location = new System.Drawing.Point(102, 201);
+            this.DescriptionTextBx.Multiline = true;
+            this.DescriptionTextBx.Name = "DescriptionTextBx";
+            this.DescriptionTextBx.Size = new System.Drawing.Size(240, 106);
+            this.DescriptionTextBx.TabIndex = 6;
+            // 
+            // IsActiveCheckBx
+            // 
+            this.IsActiveCheckBx.AutoSize = true;
+            this.IsActiveCheckBx.Checked = true;
+            this.IsActiveCheckBx.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.IsActiveCheckBx.Location = new System.Drawing.Point(255, 162);
+            this.IsActiveCheckBx.Name = "IsActiveCheckBx";
+            this.IsActiveCheckBx.Size = new System.Drawing.Size(64, 17);
+            this.IsActiveCheckBx.TabIndex = 5;
+            this.IsActiveCheckBx.Text = "IsActive";
+            this.IsActiveCheckBx.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.saveToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.deleteToolStripMenuItem1,
+            this.toolStripMenuItem1,
+            this.closeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(440, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Size = new System.Drawing.Size(369, 24);
+            this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(22, 20);
+            this.deleteToolStripMenuItem.Text = "|";
+            // 
+            // deleteToolStripMenuItem1
+            // 
+            this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(52, 20);
+            this.deleteToolStripMenuItem1.Text = "Delete";
+            this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem1.Text = "|";
             // 
             // closeToolStripMenuItem
             // 
@@ -68,129 +178,44 @@ namespace SchApp.Forms
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // PasswordLbl
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem1.Text = "|";
+            this.PasswordLbl.AutoSize = true;
+            this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLbl.Location = new System.Drawing.Point(23, 120);
+            this.PasswordLbl.Name = "PasswordLbl";
+            this.PasswordLbl.Size = new System.Drawing.Size(65, 13);
+            this.PasswordLbl.TabIndex = 10;
+            this.PasswordLbl.Text = "Password:";
             // 
-            // saveToolStripMenuItem
+            // PasswordTxtBx
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.saveToolStripMenuItem.Text = "Save";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
-            this.toolStripMenuItem2.Text = "|";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // UserNamelbl
-            // 
-            this.UserNamelbl.AutoSize = true;
-            this.UserNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNamelbl.Location = new System.Drawing.Point(23, 62);
-            this.UserNamelbl.Name = "UserNamelbl";
-            this.UserNamelbl.Size = new System.Drawing.Size(90, 16);
-            this.UserNamelbl.TabIndex = 1;
-            this.UserNamelbl.Text = "User Name:";
-            // 
-            // UserNameTxtBox
-            // 
-            this.UserNameTxtBox.Location = new System.Drawing.Point(119, 61);
-            this.UserNameTxtBox.Name = "UserNameTxtBox";
-            this.UserNameTxtBox.Size = new System.Drawing.Size(267, 20);
-            this.UserNameTxtBox.TabIndex = 2;
-            // 
-            // Passwordlbl
-            // 
-            this.Passwordlbl.AutoSize = true;
-            this.Passwordlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Passwordlbl.Location = new System.Drawing.Point(26, 104);
-            this.Passwordlbl.Name = "Passwordlbl";
-            this.Passwordlbl.Size = new System.Drawing.Size(80, 16);
-            this.Passwordlbl.TabIndex = 3;
-            this.Passwordlbl.Text = "Password:";
-            // 
-            // PasswordTxtBox
-            // 
-            this.PasswordTxtBox.Location = new System.Drawing.Point(119, 103);
-            this.PasswordTxtBox.Name = "PasswordTxtBox";
-            this.PasswordTxtBox.Size = new System.Drawing.Size(267, 20);
-            this.PasswordTxtBox.TabIndex = 4;
-            // 
-            // UserRoleComboBx
-            // 
-            this.UserRoleComboBx.FormattingEnabled = true;
-            this.UserRoleComboBx.Location = new System.Drawing.Point(119, 145);
-            this.UserRoleComboBx.Name = "UserRoleComboBx";
-            this.UserRoleComboBx.Size = new System.Drawing.Size(199, 21);
-            this.UserRoleComboBx.TabIndex = 5;
-            // 
-            // UserRolelbl
-            // 
-            this.UserRolelbl.AutoSize = true;
-            this.UserRolelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserRolelbl.Location = new System.Drawing.Point(29, 146);
-            this.UserRolelbl.Name = "UserRolelbl";
-            this.UserRolelbl.Size = new System.Drawing.Size(82, 16);
-            this.UserRolelbl.TabIndex = 6;
-            this.UserRolelbl.Text = "User Role:";
-            // 
-            // ActiveUserChkBox
-            // 
-            this.ActiveUserChkBox.AutoSize = true;
-            this.ActiveUserChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActiveUserChkBox.Location = new System.Drawing.Point(336, 147);
-            this.ActiveUserChkBox.Name = "ActiveUserChkBox";
-            this.ActiveUserChkBox.Size = new System.Drawing.Size(92, 17);
-            this.ActiveUserChkBox.TabIndex = 7;
-            this.ActiveUserChkBox.Text = "Active User";
-            this.ActiveUserChkBox.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(119, 192);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 94);
-            this.textBox1.TabIndex = 8;
-            // 
-            // DescriptionLbl
-            // 
-            this.DescriptionLbl.AutoSize = true;
-            this.DescriptionLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescriptionLbl.Location = new System.Drawing.Point(26, 193);
-            this.DescriptionLbl.Name = "DescriptionLbl";
-            this.DescriptionLbl.Size = new System.Drawing.Size(91, 16);
-            this.DescriptionLbl.TabIndex = 9;
-            this.DescriptionLbl.Text = "Description:";
+            this.PasswordTxtBx.Location = new System.Drawing.Point(102, 117);
+            this.PasswordTxtBx.Name = "PasswordTxtBx";
+            this.PasswordTxtBx.Size = new System.Drawing.Size(175, 20);
+            this.PasswordTxtBx.TabIndex = 3;
+            this.PasswordTxtBx.UseSystemPasswordChar = true;
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 301);
-            this.Controls.Add(this.DescriptionLbl);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.ActiveUserChkBox);
-            this.Controls.Add(this.UserRolelbl);
-            this.Controls.Add(this.UserRoleComboBx);
-            this.Controls.Add(this.PasswordTxtBox);
-            this.Controls.Add(this.Passwordlbl);
-            this.Controls.Add(this.UserNameTxtBox);
-            this.Controls.Add(this.UserNamelbl);
+            this.ClientSize = new System.Drawing.Size(369, 322);
+            this.Controls.Add(this.PasswordTxtBx);
+            this.Controls.Add(this.PasswordLbl);
+            this.Controls.Add(this.IsActiveCheckBx);
+            this.Controls.Add(this.DescriptionTextBx);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.UserRoleLbl);
+            this.Controls.Add(this.UserRoleComboBox);
+            this.Controls.Add(this.LastNameTxtBx);
+            this.Controls.Add(this.LastNameLbl);
+            this.Controls.Add(this.FirstNameTxtBx);
+            this.Controls.Add(this.FirstNameLbl);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "UserForm";
-            this.Text = "Users - Add/Delete";
+            this.Text = "User Form";
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -201,20 +226,22 @@ namespace SchApp.Forms
 
         #endregion
 
+        private System.Windows.Forms.Label FirstNameLbl;
+        private System.Windows.Forms.TextBox FirstNameTxtBx;
+        private System.Windows.Forms.TextBox LastNameTxtBx;
+        private System.Windows.Forms.Label LastNameLbl;
+        private System.Windows.Forms.ComboBox UserRoleComboBox;
+        private System.Windows.Forms.Label UserRoleLbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox DescriptionTextBx;
+        private System.Windows.Forms.CheckBox IsActiveCheckBx;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.Label UserNamelbl;
-        private System.Windows.Forms.TextBox UserNameTxtBox;
-        private System.Windows.Forms.Label Passwordlbl;
-        private System.Windows.Forms.TextBox PasswordTxtBox;
-        private System.Windows.Forms.ComboBox UserRoleComboBx;
-        private System.Windows.Forms.Label UserRolelbl;
-        private System.Windows.Forms.CheckBox ActiveUserChkBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label DescriptionLbl;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem1;
+        private System.Windows.Forms.Label PasswordLbl;
+        private System.Windows.Forms.TextBox PasswordTxtBx;
     }
 }

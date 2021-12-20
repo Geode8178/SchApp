@@ -17,33 +17,6 @@ namespace SchApp.Forms
         public UserRolesForm()
         {
             InitializeComponent();
-            LoadUserRolesIntoUserRolesComboBox();
-
-        }
-
-        private void LoadUserRolesIntoUserRolesComboBox()
-        {
-            using (SqlConnection con = new SqlConnection(AppConnection.GetConnectionString()))
-            {
-                using (SqlCommand cmd = new SqlCommand("usp_Users_LoadUserRolesIntoUserRoleComboBox", con))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    if (con.State != ConnectionState.Open)
-                        con.Open();
-                    DataTable dtUserRoles = new DataTable();
-
-                    SqlDataReader sdr = cmd.ExecuteReader();
-
-                    dtUserRoles.Load(sdr);
-
-                    UserRoleSearchComboBox.DataSource = dtUserRoles;
-                    UserRoleSearchComboBox.DisplayMember = "RoleTitle";
-                    UserRoleSearchComboBox.ValueMember = "RoleID";
-
-                }
-
-            }
         }
 
         public int roleID { get; set; } //Properties for handling update process.
@@ -75,64 +48,6 @@ namespace SchApp.Forms
             }
         }
 
-        private void UserRoleSaveBtn_Click(object sender, EventArgs e)  //Work performed when the User Roles Form save button is clicked.
-        {
-            if (IsFormValid())
-            {
-                if (this.IsUpdate)
-                {
-                    //Perform UPDATE procedure.
-                    {
-                        using (SqlConnection con = new SqlConnection(AppConnection.GetConnectionString()))
-                        {
-                            using (SqlCommand cmd = new SqlCommand("usp_UserRoles_UpdateUSerRolesByRoleID", con))
-                            {
-                                cmd.CommandType = CommandType.StoredProcedure;
-
-                                cmd.Parameters.AddWithValue("@RoleID", this.roleID);
-                                cmd.Parameters.AddWithValue("@RoleTitle", NewRoleTxtBox.Text.Trim());
-                                cmd.Parameters.AddWithValue("@Description", RoleDescriptionTxtBox.Text.Trim());
-                                cmd.Parameters.AddWithValue("@CreatedBy", "Admin");
-
-                                if (con.State != ConnectionState.Open)
-                                    con.Open();
-
-
-                                cmd.ExecuteNonQuery();
-
-                                MessageBox.Show("Role has been successfully updated!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                resetForm();
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    using (SqlConnection con = new SqlConnection(AppConnection.GetConnectionString()))
-                    {
-                        using (SqlCommand cmd = new SqlCommand("usp_UserRoles_InsertRole", con))
-                        {
-                            cmd.CommandType = CommandType.StoredProcedure;
-
-                            cmd.Parameters.AddWithValue("@RoleTitle", NewRoleTxtBox.Text.Trim());
-                            cmd.Parameters.AddWithValue("@Description", RoleDescriptionTxtBox.Text.Trim());
-                            cmd.Parameters.AddWithValue("@CreatedBy", "Admin");
-
-                            if (con.State != ConnectionState.Open)
-                                con.Open();
-
-                            cmd.ExecuteNonQuery();
-
-                            MessageBox.Show("Role has been successfully saved!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            resetForm();
-
-                        }
-                    }
-                }
-                }
-            }
         private void resetForm() //Clear the form after adding new user role information, updating user role information, or deleting user role information.
         {
             NewRoleTxtBox.Clear();
@@ -145,8 +60,8 @@ namespace SchApp.Forms
             {
                 this.roleID = 0;
                 this.IsUpdate = false;
-                UserRoleSaveBtn.Text = "Save";
-                UserRoleDeleteBtn.Enabled = false;
+                SaveButton.Text = "Save";
+                DeleteButton.Enabled = false;
             }
 
         }
@@ -167,68 +82,19 @@ namespace SchApp.Forms
                 return false;
             }
 
-            return true;
-        }
-
-        
-
-        private void UserRoleSearchBtn_Click(object sender, EventArgs e)
-        {
-            if (UserRoleSearchComboBox.Text != string.Empty)
+            if (RoleDescriptionTxtBox.Text.Trim() == string.Empty)
             {
-                using (SqlConnection con = new SqlConnection(AppConnection.GetConnectionString()))
-                {
-                    using (SqlCommand cmd = new SqlCommand("usp_UserRoles_UserRolesComboBoxSearch", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        //Must pass parameters
-                        cmd.Parameters.AddWithValue("@RoleTitle", UserRoleSearchComboBox.Text.Trim());
-
-                        if (con.State != ConnectionState.Open)
-                            con.Open();
-
-                        DataTable dtUSerRoleComboBox = new DataTable();
-
-                        SqlDataReader sdr = cmd.ExecuteReader();
-
-                        if (sdr.HasRows)
-                        {
-                            dtUSerRoleComboBox.Load(sdr);
-
-                            UserRoleViewGrid.DataSource = dtUSerRoleComboBox;
-                            
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("The user role does not exist.", "No User Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
+                MessageBox.Show("Please enter the type off access this user role has (Full/HR/Advisor/Teacher/SchoolAdministrator).", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                NewRoleTxtBox.Focus();
+                return false;
             }
+
+            return true;
         }
 
      
 
-        private void UserRoleViewGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (UserRoleViewGrid.Rows.Count > 0)
-            {
-                int roleID = Convert.ToInt32(UserRoleViewGrid.SelectedRows[0].Cells[0].Value);
-
-                UserRolesForm userRolesForm = new UserRolesForm();
-                userRolesForm.roleID = roleID;
-                userRolesForm.IsUpdate = true;
-                userRolesForm.ShowDialog();
-                
-
-                LoadUserRoleDataIntoUserRoleGrid();
-
-            }
-        }
-
-        private void UserRolesForm_Load(object sender, EventArgs e)
+        private void UserRolesForm_Load(object sender, EventArgs e) //Loads a new User Role form to allow updating of records.
         {
             if (this.IsUpdate == true)
             {
@@ -255,8 +121,8 @@ namespace SchApp.Forms
                         RoleDescriptionTxtBox.Text = row["Description"].ToString();
 
                         //Switching Save control to Update.
-                        UserRoleSaveBtn.Text = "Update";
-                        UserRoleDeleteBtn.Enabled = true;
+                        SaveButton.Text = "Update";
+                        DeleteButton.Enabled = true;
                         
                     }
                 }
@@ -264,13 +130,76 @@ namespace SchApp.Forms
 
         }
 
-        private void UserRoleRefreshBtn_Click(object sender, EventArgs e)
+        private void UserRoleRefreshBtn_Click(object sender, EventArgs e) //Refreshes the information grid.
         {
             LoadUserRoleDataIntoUserRoleGrid();
-            UserRoleSearchComboBox.Focus();
+        }
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e) //Code for close button events.
+        {
+            this.Close();
         }
 
-        private void UserRoleDeleteBtn_Click(object sender, EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e) //Code for save button events.
+        {
+            if (IsFormValid())
+            {
+                if (this.IsUpdate)
+                {
+                    //Perform UPDATE procedure.
+                    {
+                        using (SqlConnection con = new SqlConnection(AppConnection.GetConnectionString()))
+                        {
+                            using (SqlCommand cmd = new SqlCommand("usp_UserRoles_UpdateUSerRolesByRoleID", con))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+
+                                cmd.Parameters.AddWithValue("@RoleID", this.roleID);
+                                cmd.Parameters.AddWithValue("@RoleTitle", NewRoleTxtBox.Text.Trim());
+                                cmd.Parameters.AddWithValue("@Description", RoleDescriptionTxtBox.Text.Trim());
+                                cmd.Parameters.AddWithValue("@CreatedBy", LoggedInUSerInfo.firstName + LoggedInUSerInfo.lastName);
+
+                                if (con.State != ConnectionState.Open)
+                                    con.Open();
+
+
+                                cmd.ExecuteNonQuery();
+
+                                MessageBox.Show("Role has been successfully updated!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                resetForm();
+                                
+                            }
+                        }
+                    }
+                }
+                else
+                {           //Perform INSERT procedure.
+                    using (SqlConnection con = new SqlConnection(AppConnection.GetConnectionString()))
+                    {
+                        using (SqlCommand cmd = new SqlCommand("usp_UserRoles_InsertRole", con))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.AddWithValue("@RoleTitle", NewRoleTxtBox.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Description", RoleDescriptionTxtBox.Text.Trim());
+                            cmd.Parameters.AddWithValue("@CreatedBy", LoggedInUSerInfo.firstName + LoggedInUSerInfo.lastName);
+
+                            if (con.State != ConnectionState.Open)
+                                con.Open();
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Role has been successfully saved!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            resetForm();
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e) //Code allowing the deletion of user roles.
         {
             if (this.IsUpdate)
             {
@@ -282,7 +211,7 @@ namespace SchApp.Forms
                     {
                         using (SqlConnection con = new SqlConnection(AppConnection.GetConnectionString()))
                         {
-                            using (SqlCommand cmd = new SqlCommand("usp_UserRoles_DeleteByRoleID", con))
+                            using (SqlCommand cmd = new SqlCommand("usp_UserRoles_DeleteUserByRoleId", con))
                             {
                                 cmd.CommandType = CommandType.StoredProcedure;
 

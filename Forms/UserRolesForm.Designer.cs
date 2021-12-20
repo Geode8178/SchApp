@@ -33,25 +33,25 @@ namespace SchApp.Forms
             this.NewRoleTxtBox = new System.Windows.Forms.TextBox();
             this.RoleDescriptionlbl = new System.Windows.Forms.Label();
             this.RoleDescriptionTxtBox = new System.Windows.Forms.TextBox();
-            this.UserRoleSaveBtn = new System.Windows.Forms.Button();
-            this.UserRoleDeleteBtn = new System.Windows.Forms.Button();
             this.UserRoleViewGrid = new System.Windows.Forms.DataGridView();
-            this.RoleSearchlbl = new System.Windows.Forms.Label();
-            this.UserRoleSearchBtn = new System.Windows.Forms.Button();
-            this.UserRoleSearchComboBox = new System.Windows.Forms.ComboBox();
             this.UserRoleRefreshBtn = new System.Windows.Forms.Button();
-            this.UserRoleAddDeletebtn = new System.Windows.Forms.Label();
-            this.UserRoleSearchlbl = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteButton = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.UserRoleViewGrid)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // NewRoleLbl
             // 
             this.NewRoleLbl.AutoSize = true;
-            this.NewRoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewRoleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewRoleLbl.Location = new System.Drawing.Point(11, 39);
             this.NewRoleLbl.Name = "NewRoleLbl";
-            this.NewRoleLbl.Size = new System.Drawing.Size(36, 15);
+            this.NewRoleLbl.Size = new System.Drawing.Size(41, 15);
             this.NewRoleLbl.TabIndex = 0;
             this.NewRoleLbl.Text = "Role:";
             // 
@@ -65,10 +65,10 @@ namespace SchApp.Forms
             // RoleDescriptionlbl
             // 
             this.RoleDescriptionlbl.AutoSize = true;
-            this.RoleDescriptionlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleDescriptionlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoleDescriptionlbl.Location = new System.Drawing.Point(11, 90);
             this.RoleDescriptionlbl.Name = "RoleDescriptionlbl";
-            this.RoleDescriptionlbl.Size = new System.Drawing.Size(101, 15);
+            this.RoleDescriptionlbl.Size = new System.Drawing.Size(118, 15);
             this.RoleDescriptionlbl.TabIndex = 0;
             this.RoleDescriptionlbl.Text = "Role Description:";
             // 
@@ -80,119 +80,92 @@ namespace SchApp.Forms
             this.RoleDescriptionTxtBox.Size = new System.Drawing.Size(431, 81);
             this.RoleDescriptionTxtBox.TabIndex = 2;
             // 
-            // UserRoleSaveBtn
-            // 
-            this.UserRoleSaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.UserRoleSaveBtn.Location = new System.Drawing.Point(112, 87);
-            this.UserRoleSaveBtn.Name = "UserRoleSaveBtn";
-            this.UserRoleSaveBtn.Size = new System.Drawing.Size(75, 23);
-            this.UserRoleSaveBtn.TabIndex = 3;
-            this.UserRoleSaveBtn.Text = "Save";
-            this.UserRoleSaveBtn.UseVisualStyleBackColor = false;
-            this.UserRoleSaveBtn.Click += new System.EventHandler(this.UserRoleSaveBtn_Click);
-            // 
-            // UserRoleDeleteBtn
-            // 
-            this.UserRoleDeleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.UserRoleDeleteBtn.Enabled = false;
-            this.UserRoleDeleteBtn.Location = new System.Drawing.Point(198, 87);
-            this.UserRoleDeleteBtn.Name = "UserRoleDeleteBtn";
-            this.UserRoleDeleteBtn.Size = new System.Drawing.Size(75, 23);
-            this.UserRoleDeleteBtn.TabIndex = 4;
-            this.UserRoleDeleteBtn.Text = "Delete";
-            this.UserRoleDeleteBtn.UseVisualStyleBackColor = false;
-            this.UserRoleDeleteBtn.Click += new System.EventHandler(this.UserRoleDeleteBtn_Click);
-            // 
             // UserRoleViewGrid
             // 
             this.UserRoleViewGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UserRoleViewGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserRoleViewGrid.Location = new System.Drawing.Point(8, 286);
+            this.UserRoleViewGrid.Location = new System.Drawing.Point(8, 232);
             this.UserRoleViewGrid.Name = "UserRoleViewGrid";
             this.UserRoleViewGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.UserRoleViewGrid.Size = new System.Drawing.Size(435, 294);
-            this.UserRoleViewGrid.TabIndex = 5;
-            this.UserRoleViewGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserRoleViewGrid_CellContentClick);
-            // 
-            // RoleSearchlbl
-            // 
-            this.RoleSearchlbl.AutoSize = true;
-            this.RoleSearchlbl.Location = new System.Drawing.Point(9, 262);
-            this.RoleSearchlbl.Name = "RoleSearchlbl";
-            this.RoleSearchlbl.Size = new System.Drawing.Size(84, 13);
-            this.RoleSearchlbl.TabIndex = 7;
-            this.RoleSearchlbl.Text = "Search By Role:";
-            // 
-            // UserRoleSearchBtn
-            // 
-            this.UserRoleSearchBtn.Location = new System.Drawing.Point(278, 230);
-            this.UserRoleSearchBtn.Name = "UserRoleSearchBtn";
-            this.UserRoleSearchBtn.Size = new System.Drawing.Size(75, 23);
-            this.UserRoleSearchBtn.TabIndex = 9;
-            this.UserRoleSearchBtn.Text = "Search";
-            this.UserRoleSearchBtn.UseVisualStyleBackColor = true;
-            this.UserRoleSearchBtn.Click += new System.EventHandler(this.UserRoleSearchBtn_Click);
-            // 
-            // UserRoleSearchComboBox
-            // 
-            this.UserRoleSearchComboBox.FormattingEnabled = true;
-            this.UserRoleSearchComboBox.Location = new System.Drawing.Point(99, 259);
-            this.UserRoleSearchComboBox.Name = "UserRoleSearchComboBox";
-            this.UserRoleSearchComboBox.Size = new System.Drawing.Size(344, 21);
-            this.UserRoleSearchComboBox.TabIndex = 10;
+            this.UserRoleViewGrid.TabIndex = 6;
             // 
             // UserRoleRefreshBtn
             // 
-            this.UserRoleRefreshBtn.Location = new System.Drawing.Point(368, 230);
+            this.UserRoleRefreshBtn.Location = new System.Drawing.Point(368, 203);
             this.UserRoleRefreshBtn.Name = "UserRoleRefreshBtn";
             this.UserRoleRefreshBtn.Size = new System.Drawing.Size(75, 23);
-            this.UserRoleRefreshBtn.TabIndex = 11;
+            this.UserRoleRefreshBtn.TabIndex = 4;
             this.UserRoleRefreshBtn.Text = "Show All";
             this.UserRoleRefreshBtn.UseVisualStyleBackColor = true;
             this.UserRoleRefreshBtn.Click += new System.EventHandler(this.UserRoleRefreshBtn_Click);
             // 
-            // UserRoleAddDeletebtn
+            // menuStrip1
             // 
-            this.UserRoleAddDeletebtn.AutoSize = true;
-            this.UserRoleAddDeletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserRoleAddDeletebtn.Location = new System.Drawing.Point(14, 13);
-            this.UserRoleAddDeletebtn.Name = "UserRoleAddDeletebtn";
-            this.UserRoleAddDeletebtn.Size = new System.Drawing.Size(177, 16);
-            this.UserRoleAddDeletebtn.TabIndex = 12;
-            this.UserRoleAddDeletebtn.Text = "Add / Delete User Roles";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SaveButton,
+            this.toolStripMenuItem1,
+            this.DeleteButton,
+            this.toolStripMenuItem2,
+            this.closeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(455, 24);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // UserRoleSearchlbl
+            // closeToolStripMenuItem
             // 
-            this.UserRoleSearchlbl.AutoSize = true;
-            this.UserRoleSearchlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserRoleSearchlbl.Location = new System.Drawing.Point(14, 214);
-            this.UserRoleSearchlbl.Name = "UserRoleSearchlbl";
-            this.UserRoleSearchlbl.Size = new System.Drawing.Size(131, 16);
-            this.UserRoleSearchlbl.TabIndex = 13;
-            this.UserRoleSearchlbl.Text = "User Role Search";
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem1.Text = "|";
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(43, 20);
+            this.SaveButton.Text = "Save";
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(22, 20);
+            this.toolStripMenuItem2.Text = "|";
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(52, 20);
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // UserRolesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 587);
-            this.Controls.Add(this.UserRoleSearchlbl);
-            this.Controls.Add(this.UserRoleAddDeletebtn);
+            this.ClientSize = new System.Drawing.Size(455, 539);
             this.Controls.Add(this.UserRoleRefreshBtn);
-            this.Controls.Add(this.UserRoleSearchComboBox);
-            this.Controls.Add(this.UserRoleSearchBtn);
-            this.Controls.Add(this.RoleSearchlbl);
             this.Controls.Add(this.UserRoleViewGrid);
-            this.Controls.Add(this.UserRoleDeleteBtn);
-            this.Controls.Add(this.UserRoleSaveBtn);
             this.Controls.Add(this.RoleDescriptionTxtBox);
             this.Controls.Add(this.NewRoleTxtBox);
             this.Controls.Add(this.RoleDescriptionlbl);
             this.Controls.Add(this.NewRoleLbl);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "UserRolesForm";
             this.Text = "User Roles - Add - Update - Delete - Search";
             this.Load += new System.EventHandler(this.UserRolesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UserRoleViewGrid)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,14 +177,13 @@ namespace SchApp.Forms
         private System.Windows.Forms.TextBox NewRoleTxtBox;
         private System.Windows.Forms.Label RoleDescriptionlbl;
         private System.Windows.Forms.TextBox RoleDescriptionTxtBox;
-        private System.Windows.Forms.Button UserRoleSaveBtn;
-        private System.Windows.Forms.Button UserRoleDeleteBtn;
         private System.Windows.Forms.DataGridView UserRoleViewGrid;
-        private System.Windows.Forms.Label RoleSearchlbl;
-        private System.Windows.Forms.Button UserRoleSearchBtn;
-        private System.Windows.Forms.ComboBox UserRoleSearchComboBox;
         private System.Windows.Forms.Button UserRoleRefreshBtn;
-        private System.Windows.Forms.Label UserRoleAddDeletebtn;
-        private System.Windows.Forms.Label UserRoleSearchlbl;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem SaveButton;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem DeleteButton;
     }
 }
